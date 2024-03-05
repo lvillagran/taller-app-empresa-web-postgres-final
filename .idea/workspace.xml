@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7b95d4c2-eb2f-4de5-9b1f-c2f4c0dded3b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/iaFootTrackerBackendApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/iaFootTrackerBackendApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/models/Roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/models/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/models/UsersRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/payload/request/SignupRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/payload/response/MessageResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/repository/IUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/repository/IUsersRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/servicio/IServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/java/ia/foot/tracker/backend/api/security/jwt/authentication/servicio/ServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/test/java/ia/foot/tracker/backend/api/iaFootTrackerBackendApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ia-foot-tracker-backend-api/src/test/java/ia/foot/tracker/backend/api/iaFootTrackerBackendApiApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../ia-foot-tracker-backend-api" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dFFkpiiL4qq5NF0AtZwT5RKA2R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/wsBackEnd/ia-foot-tracker-backend-api/pom.xml",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b95d4c2-eb2f-4de5-9b1f-c2f4c0dded3b" name="Changes" comment="" />
+      <created>1709596066938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709596066938</updated>
+    </task>
+    <servers />
+  </component>
+</project>
