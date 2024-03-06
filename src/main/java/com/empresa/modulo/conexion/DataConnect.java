@@ -1,6 +1,5 @@
 package com.empresa.modulo.conexion;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,13 +7,13 @@ import java.sql.SQLException;
 public class DataConnect {
 	protected static Connection conn;
 	static String servidor = "127.0.0.1";
-	static String base = "desa";
-	static String url = "jdbc:postgresql://" + servidor + ":5432/" + base;
+	static String base = "XE";
+	static String url = "jdbc:oracle:thin:@//" + servidor + ":1521/" + base;
 
 	public static Connection getConnection() {
 		try {
-			Class.forName("org.postgresql.Driver").newInstance();
-			conn = DriverManager.getConnection(url, "postgres", "root");
+			Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
+			conn = DriverManager.getConnection(url, "SYSTEM", "root");
 			return conn;
 		} catch (Exception ex) {
 			System.out.println("DataConnect -->" + ex.getMessage());
@@ -67,4 +66,5 @@ public class DataConnect {
 			e.printStackTrace();
 		}
 	}
+
 }
