@@ -1,65 +1,67 @@
-/***** BASE DE DATOS ****/
-/*
- --Tabla Usuaerio del sistema--
-  drop table usuarios;
- 
-CREATE TABLE usuarios(	
-      ID NUMBER, 
-	   usuario VARCHAR2(50), 
-	   password VARCHAR2(50),
-     estado VARCHAR2(1) 
-	  );
-    
- insert into usuarios (id, usuario, password, estado) values(1,'LVILLAGRAN', '123456789','A');
- commit;
-select * from usuarios;
+/***** BASE DE DATOS POSTGRES  Version: 9.6 ****/
+--***********TABLA USERS*************--
+ drop table desarrollo.usuarios;
+
+CREATE TABLE desarrollo.usuarios (
+    id SERIAL PRIMARY KEY,
+    usuario VARCHAR(100),
+    password VARCHAR(100),
+    estado VARCHAR(1)
+   );
+
+--Creamos secuencia y asociamos con la tabla--
+drop SEQUENCE desarrollo.secuencia_users;
+CREATE SEQUENCE desarrollo.secuencia_users;
+ALTER TABLE desarrollo.usuarios ALTER COLUMN id SET DEFAULT nextval('secuencia_users');
+SELECT nextval('desarrollo.secuencia_users');
+
+--Insertamos usuario--
+INSERT INTO desarrollo.usuarios(id, usuario, password, estado)VALUES (1, 'LVILLAGRAN', '123456789', 'A');
+commit;
+select * from desarrollo.usuarios;
+
    
-   
---Tabla tipo de producto--
- drop table tipo_producto;
+--*********TABLA TIPO DE PRODUCTO***********--
+     drop table desarrollo.tipo_producto;
  
-	CREATE TABLE tipo_producto (
-			  id_tipo_producto NUMBER PRIMARY KEY,
-			  nombre VARCHAR2(100)
+	CREATE TABLE desarrollo.tipo_producto (
+			  id_tipo_producto SERIAL PRIMARY KEY,
+			  nombre VARCHAR(100)
 			);
 			
-
-insert into tipo_producto (id_tipo_producto, nombre ) values(1,'LACTEOS');
-insert into tipo_producto (id_tipo_producto, nombre ) values(2,'GRAMINEAS');
-insert into tipo_producto (id_tipo_producto, nombre ) values(3,'GRASAS');
-select * from tipo_producto;
-
-
---Secuencia producto--
-drop SEQUENCE sec_producto;
-
-CREATE SEQUENCE sec_producto
-    START WITH 1 
-    INCREMENT BY 1;
-
-select sec_producto.nextval from dual;
-
-
---Tabla Producto--
-drop table producto;
-
-			CREATE TABLE producto (
-			   id_producto NUMBER PRIMARY KEY,
-			   nombre VARCHAR2(100),
-			   descripcion VARCHAR2(100),
-			   precio NUMBER,
-			   estado VARCHAR2(1),
-			   fecha_registro DATE,
-			   tipo_producto_id NUMBER NOT NULL,
-			  FOREIGN KEY (tipo_producto_id) REFERENCES TIPO_PRODUCTO(id_tipo_producto)
-			);
- 
-insert into producto values(1,'arroz', 'arroz conejo',12,'A','06/01/2024',1 );
-insert into producto values(2,'BONNELLA', 'mantequilla libra',12,'A','06/01/2024',2);
-insert into producto values(8,'BONNELLA', 'mantequilla libra',12,'A','06/01/2024',3);
+insert into desarrollo.tipo_producto (id_tipo_producto, nombre ) values(1,'LACTEOS');
+insert into desarrollo.tipo_producto (id_tipo_producto, nombre ) values(2,'GRAMINEAS');
+insert into desarrollo.tipo_producto (id_tipo_producto, nombre ) values(3,'GRASAS');
 commit; 
+select * from desarrollo.tipo_producto;
 
-select * from  producto;	
-     
-select * from  producto;	
+
+--********** TABLA PRODUCTO ************--
+     drop table desarrollo.producto;
+
+			CREATE TABLE desarrollo.producto (
+		    id_producto SERIAL PRIMARY KEY,
+		    nombre VARCHAR(100),
+		    descripcion VARCHAR(100),
+		    precio BIGINT,
+		    estado VARCHAR(1),
+		    fecha_registro DATE,
+		    tipo_producto_id BIGINT NOT NULL,
+		    CONSTRAINT fk_tipo_producto FOREIGN KEY (tipo_producto_id)
+		        REFERENCES tipo_producto(id_tipo_producto)
+		);
+		
+--Creamos secuencia y asociamos con la tabla--
+drop sequence desarrollo.secuencia_producto;
+CREATE SEQUENCE desarrollo.secuencia_producto;
+ALTER TABLE desarrollo.producto ALTER COLUMN id_producto SET DEFAULT nextval('secuencia_producto');	
+SELECT nextval('desarrollo.secuencia_producto');
+
+--
+insert into desarrollo.producto values(1,'arroz', 'arroz conejo',12,'A','06/01/2024',1 );
+insert into desarrollo.producto values(2,'BONNELLA', 'mantequilla libra',12,'A','06/01/2024',2);
+insert into desarrollo.producto values(3,'BONNELLA', 'mantequilla libra',12,'A','06/01/2024',3);
+commit; 
+select * from  desarrollo.producto;
+--delete from desarrollo.producto;
 */
