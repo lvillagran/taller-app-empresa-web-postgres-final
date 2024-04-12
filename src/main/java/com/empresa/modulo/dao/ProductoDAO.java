@@ -20,7 +20,7 @@ public class ProductoDAO extends DataConnect {
 
 		try {
 			 int lValorSecuencia = 0;
-			 String sqlSecuencia = " select sec_producto.nextval from dual";
+			 String sqlSecuencia = "select nextval('desarrollo.secuencia_producto')";
 			
 			 ps = con.prepareStatement(sqlSecuencia);
 			 ResultSet lSecuencialConsulta = ps.executeQuery();
@@ -31,7 +31,7 @@ public class ProductoDAO extends DataConnect {
 		    }
 				   
 			   
-			String lInsert="insert into producto "
+			String lInsert="insert into desarrollo.producto "
 					       + " (id_producto"
 					       + ", nombre"
 					       + ", descripcion"
@@ -87,7 +87,7 @@ public class ProductoDAO extends DataConnect {
 						+ ", p.descripcion"
 						+ ", p.precio"
 						+ ", p.fecha_registro "
-					    + " from producto p"
+					    + " from desarrollo.producto p"
 					    + " order by p.id_producto desc ";
 			
 			con = DataConnect.getConnection();
@@ -120,10 +120,10 @@ public class ProductoDAO extends DataConnect {
 
 		try {
 			
-			String sql = "update producto p "
-					   + " set p.nombre=? "
-					   + " ,p.precio=?"
-					   + " where p.id_producto=?";
+			String sql = "update desarrollo.producto"
+					   + " set nombre=? "
+					   + " ,precio=?"
+					   + " where id_producto=?";
 			con = DataConnect.getConnection();
 			con.setAutoCommit(false);
 			ps = con.prepareStatement(sql);
@@ -155,7 +155,7 @@ public class ProductoDAO extends DataConnect {
 		PreparedStatement ps = null;
 		try {
 			
-			String sql = " delete producto where id_producto=? ";
+			String sql = " delete from desarrollo.producto where id_producto=? ";
 			con = DataConnect.getConnection();
 			con.setAutoCommit(false);
 			ps = con.prepareStatement(sql);

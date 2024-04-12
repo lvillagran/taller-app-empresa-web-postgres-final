@@ -16,7 +16,7 @@ public class LoginDAO{
 
 		try {
 			con = DataConnect.getConnection();
-			ps = con.prepareStatement("select usuario, password from usuarios where usuario = ? and password = ?");
+			ps = con.prepareStatement("select usuario, password from desarrollo.usuarios where usuario = ? and password = ?");
 			ps.setString(1, usuario);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
